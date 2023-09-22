@@ -1,0 +1,16 @@
+
+.home {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    flex-grow: 5;
+    height: 100%;
+    overflow: hidden;
+    background-color: #dcc4ec;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
