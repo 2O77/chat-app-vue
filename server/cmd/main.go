@@ -19,14 +19,25 @@ import (
 	"github.com/gofiber/websocket/v2"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"github.com/joho/godotenv"
+     
 )
 
 func main() {
 	app := fiber.New()
 
 	app.Use(cors.New())
+    
+	err := godotenv.Load("/home/hyvinhiljaa/chat-app-server/.env")
+	if err != nil {
+		return "", fmt.Errorf("failed to load .env file: %w", err)
+	}
 
-	mongoURI := "mongodb+srv://recepahmetkara:13243546abat@chat-app.1zdbzve.mongodb.net/"
+	mongoURI := os.Getenv("MONGO_URL")
+	if jwtSecret == "" {
+		return "", fmt.Errorf("JWT_SECRET is missing in .env file")
+	}
+
 	dbName := "chat-app"
 
 	clientOptions := options.Client().ApplyURI(mongoURI)
