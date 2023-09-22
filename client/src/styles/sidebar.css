@@ -1,5 +1,11 @@
 .sidebar {
-    width: 120px;
+    width: 475px;
     height: 100%;
-    background-color: red;
+    background-color: #c8a3e1;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
 }
