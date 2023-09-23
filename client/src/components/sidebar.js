@@ -12,14 +12,42 @@ const Sidebar = () => {
                 </div>
                 <div className="icon-section">
                     <div className="icon-container">
-                        <img src={FriendsIcon} alt='Create-Chat-Icon' className="header-icon"/>
+                        <img role="button" src={FriendsIcon} alt='Create-Chat-Icon' className="header-icon"/>
                     </div>
                     <div className="icon-container">
-                        <img src={CreateChatIcon} alt='Create-Chat-Icon' className="header-icon"/>
+                        <img role='button' src={CreateChatIcon} alt='Create-Chat-Icon' className="header-icon"/>
                     </div>
                 </div>
             </div>
-            <div className="sidebar-context"></div>
+            <div className="sidebar-context">
+                <div className="chat-bar">
+                    <u> abc </u>
+                </div>
+                <div className="chat-bar">
+                    
+                </div>
+                <div className="chat-bar">
+                    
+                </div>
+                <div className="chat-bar">
+                    
+                </div>
+                <div className="chat-bar">
+                    
+                </div>
+                <div className="chat-bar">
+                    
+                </div>
+                <div className="chat-bar">
+                    
+                </div>
+                <div className="chat-bar">
+                    
+                </div>
+                <div className="chat-bar">
+
+                </div>
+            </div>
         </div>
     )
 }
