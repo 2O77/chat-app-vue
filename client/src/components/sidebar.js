@@ -21,31 +21,63 @@ const Sidebar = () => {
             </div>
             <div className="sidebar-context">
                 <div className="chat-bar">
-                    <u> abc </u>
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                        <div className="username-container">
+                            <p>enes furkan olcay</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="chat-bar">
-                    
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="chat-bar">
-                    
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="chat-bar">
-                    
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="chat-bar">
-                    
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="chat-bar">
-                    
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="chat-bar">
-                    
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="chat-bar">
-                    
-                </div>
-                <div className="chat-bar">
-
+                    <div className="chat-bar-container">
+                        <div className="friend-picture-container">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
