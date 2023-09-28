@@ -292,3 +292,32 @@ func (cr *ChatRepository) RenameChat(chatID string, newName string) error {
 
 	return nil
 }
+
+func (cr *ChatRepository) LoadMessage(message chat.Message) error {
+    collection := cr.mongoDB.Collection("messages")
+
+    _, err := collection.InsertOne(context.Background(),message)
+    if err != nil {
+        return err
+    }
+
+    return nil
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -459,3 +459,15 @@ func (cs *ChatService) ChangeChatName(adminToken string, chatID string, newName 
 
 	return nil
 }
+
+func (cs *ChatService) SaveMessage (message chat.Message) error {
+
+    err := cs.chatrepository.LoadMessage(message)
+    if err != nil {
+        return err 
+    }
+
+    return nil
+}
+
+

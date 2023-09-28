@@ -13,6 +13,7 @@ type ChatService interface {
 	RemoveUserFromChat(adminToken string, chatID string, userID string) error
 	ChangeChatName(adminToken string, chatID string, newName string) error
 	LeftChat(token string, chatID string) error
+    SaveMessage(message Message) error
 }
 
 type ChatRepository interface {
@@ -32,6 +33,7 @@ type ChatRepository interface {
 	MakeUserAdmin(chatID string, userID string) error
 	MakeUserNotAdmin(chatID string, userID string) error
 	RenameChat(chatID string, newName string) error
+    LoadMessage(message Message) error
 }
 
 type Chat struct {
@@ -51,4 +53,5 @@ type Message struct {
 	UserID string `bson:"id"`
 	ChatID string `bson:"chat_id"`
 	Text   string `bson:"text"`
+    Timestamp string `bson:"timestamp"`  
 }

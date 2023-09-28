@@ -226,3 +226,5 @@ func (cc *ChatController) ChangeChatName(c *fiber.Ctx) error {
 
 	return c.SendStatus(fiber.StatusOK)
 }
+
+

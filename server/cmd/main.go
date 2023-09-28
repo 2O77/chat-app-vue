@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"log"
+	"os"
 
 	chatcontroller "github.com/2O77/chat-app/internal/controllers/chat-controller"
 	friendcontroller "github.com/2O77/chat-app/internal/controllers/friend-controller"
@@ -17,26 +18,19 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/websocket/v2"
+	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"github.com/joho/godotenv"
-     
 )
 
 func main() {
 	app := fiber.New()
 
 	app.Use(cors.New())
-    
-	err := godotenv.Load("/home/hyvinhiljaa/chat-app-server/.env")
-	if err != nil {
-		return "", fmt.Errorf("failed to load .env file: %w", err)
-	}
 
-	mongoURI := os.Getenv("MONGO_URL")
-	if jwtSecret == "" {
-		return "", fmt.Errorf("JWT_SECRET is missing in .env file")
-	}
+    err := godotenv.Load("/home/hyvinhiljaa/chat-app-react/server/.env")
+
+    mongoURI := os.Getenv("MONGO_URL")
 
 	dbName := "chat-app"
 
@@ -66,7 +60,7 @@ func main() {
 	chatService := chatservice.NewChatService(chatRepository, userRepository, friendService)
 	chatController := chatcontroller.NewChatController(chatService)
 
-	websockethandler := chathandler.NewWebSocketHandler()
+	websockethandler := chathandler.NewWebSocketHandler(chatService)
 
 	app.Post("/user/login", userController.LoginUser)
 	app.Delete("/user", userController.DeleteUser)
