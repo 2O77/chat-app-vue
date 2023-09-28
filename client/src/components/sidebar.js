@@ -30,55 +30,6 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="chat-bar">
-                    <div className="chat-bar-container">
-                        <div className="friend-picture-container">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className="chat-bar">
-                    <div className="chat-bar-container">
-                        <div className="friend-picture-container">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className="chat-bar">
-                    <div className="chat-bar-container">
-                        <div className="friend-picture-container">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className="chat-bar">
-                    <div className="chat-bar-container">
-                        <div className="friend-picture-container">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className="chat-bar">
-                    <div className="chat-bar-container">
-                        <div className="friend-picture-container">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className="chat-bar">
-                    <div className="chat-bar-container">
-                        <div className="friend-picture-container">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className="chat-bar">
-                    <div className="chat-bar-container">
-                        <div className="friend-picture-container">
-                            
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )
