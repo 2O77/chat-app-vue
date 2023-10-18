@@ -1,3 +1,3 @@
-# chat-app-react
+# chat-app-vue
 
 still working...
