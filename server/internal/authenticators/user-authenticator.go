@@ -19,7 +19,7 @@ func NewUserAuthenticator() *UserAuthenticator {
 }
 
 func (ua *UserAuthenticator) EncodeUser(userID string) (string, error) {
-	err := godotenv.Load("/home/hyvinhiljaa/chat-app-react/server/.env")
+	err := godotenv.Load("/home/hyvinhiljaa/chat-app-vue/server/.env")
 	if err != nil {
 		return "", fmt.Errorf("failed to load .env file: %w", err)
 	}

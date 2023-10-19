@@ -28,7 +28,10 @@ func main() {
 
 	app.Use(cors.New())
 
-	err := godotenv.Load("/home/hyvinhiljaa/chat-app-react/server/.env")
+	err := godotenv.Load("/home/hyvinhiljaa/chat-app-vue/server/.env")
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	mongoURI := os.Getenv("MONGO_URL")
 
