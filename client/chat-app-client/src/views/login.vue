@@ -31,13 +31,19 @@
                         password: this.password
                     });
 
-                    const userToken = response.data.token;
-                    localStorage.setItem("userToken", userToken);
+                    const userToken = response.data;
+                    this.setCookie("userToken", userToken, 30);
                     this.$router.push("/home");
 
                 } catch (error) {
                     console.error(error);
                 }
+           },
+                setCookie(name, value, days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    const expires = "expires=" + date.toUTCString();
+                    document.cookie = name + "=" + value + ";" + expires + ";path=/";
            }
         }
     }
