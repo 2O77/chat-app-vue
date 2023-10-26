@@ -1,12 +1,18 @@
 <template>
     <div id="sidebar">
-        a
+        {{ username }}
+        {{ id }}
     </div>
 </template>
 
 <script>
+
     export default {
-        name: "sidebar"
+        name: "sidebar", 
+        props: [
+            "username",
+            "id"
+        ]
     }
 </script>
 
