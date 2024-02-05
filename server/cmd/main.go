@@ -28,7 +28,7 @@ func main() {
 
 	app.Use(cors.New())
 
-	err := godotenv.Load("/home/hyvinhiljaa/chat-app-vue/server/.env")
+	err := godotenv.Load(".env")
 	if err != nil {
 		log.Fatal(err)
 	}
